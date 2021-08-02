@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: top;
+}
+
+section {
+    margin: 200px auto;
+    border: solid 2px lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 80px 100px 100px 100px 80px;
+    grid-template-rows: 70px auto auto;
+    grid-template-areas: 
+    " h h h . i "
+    " p p p p p "
+    " b b b b b "
+    ;
+}
+
+h3, p {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 20px
+}
+
+.header {
+    grid-area: h;
+}
+
+h3 {
+    font-weight: 400;
+    color: lightgray;
+}
+
+p {
+    grid-area: p;
+}
+
+img {
+    grid-area: i;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+    border-top: 1px solid lightgray;
+}
+
+button {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    background: #fff;
+    cursor: pointer;
+
+}
+
+button:first-of-type:hover,
+button:first-of-type:focus {
+    background: green;
+    color: #fff;
+}
+
+button:last-of-type:hover,
+button:last-of-type:focus {
+    background: red;
+    color: #fff;
+}
+
+
+
+button:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: solid 1px green;
+    border-right: none;
+    color: green;
+
+}
+
+button:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid 1px red;
+    color: red;
+
+}
+
